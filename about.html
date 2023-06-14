@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrGZuEJjO5H1YlwJwK5CDHKryZDoKTRTlXuw&usqp=CAU);
+            color: white;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .logo {
+            font-size: 30px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        nav li {
+            margin: 0 10px;
+            position: relative;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+        
+        nav a:hover {
+            color: #ccc;
+        }
+        
+        a.active,
+        a:hover {
+            background: grey;
+            transform: .5s;
+        }
+        
+        nav ul li ul {
+            position: absolute;
+            display: none;
+            background-color: #000;
+            border-radius: 0px 0px 5px 5px;
+            padding: 0;
+        }
+        
+        nav ul li:hover ul {
+            display: block;
+        }
+        
+        nav ul li ul li {
+            line-height: 1;
+            width: 120px;
+            border-radius: 5px;
+        }
+        
+        nav ul li ul li a {
+            padding: 10px 16px;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        nav ul li ul li a:hover {
+            background: grey;
+        }
+        
+        main {
+            font-size: 20px;
+            text-align: center;
+            padding: 40px;
+            margin-bottom: 20px;
+            color: black;
+            width: auto;
+            height: auto;
+            margin: 80px;
+            display: inherit;
+        }
+        
+        .wtspbtn img {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            right: 10px;
+            bottom: 55px;
+        }
+        
+        .footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            bottom: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <p><b>Clothing Store</b></p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="store.html">Home</a></li>
+                <li>SHOP
+                    <ul>
+                        <li><a href="menshop.html">Male</a></li>
+                        <li><a href="womenshop.html">Female</a></li>
+                    </ul>
+                </li>
+                <li class="active"><a href="#">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>About Us</h1>
+<p>We are a clothing store dedicated to providing high-quality, fashionable clothes at affordable prices. Our mission is to make shopping for clothes fun and easy for everyone.</p>
+<h2>Our Team</h2>
+<p>We have a team of experienced designers, stylists, and customer service representatives who are passionate about fashion and dedicated to ensuring that our customers have a positive shopping experience.</p>
+<h2>Our History</h2>
+<p>We started our business in 2010 with a small store in the downtown area. Since then, we have expanded to multiple locations and have built a loyal customer base thanks to our commitment to quality and customer service.</p>
+</main>
+
+<div class="wtspbtn">
+    <a href="https://wa.me/96181972425"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png"></a>
+</div>    
+
+<div class="footer"><p>&copy; 2023 Clothing Store. All Rights Reserved.</p></div>
+    
+</body>
+</html>
