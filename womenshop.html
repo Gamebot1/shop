@@ -33,6 +33,7 @@
         .hero {
             text-align: center;
             padding: 30px;
+            
         }    
             
         nav ul {
@@ -71,24 +72,26 @@
         .filter {
             margin-bottom: 20px;
             text-align: center;
-            border-radius: 5px;
             font-size: 20px;
+            margin-left: 45%;
+            margin-right: 65%;
             
         }
 
         .filter label {
-            margin-right: 1px;
-           
+            border-radius: 5px;
+            margin-left: 45%;
+            margin-right: 65%;
+            
+            
         }
 
         .filter select {
             padding: 5px;
-            border-radius: 3px;
             background-color: black;
             color: white;
             align-content: space-between;
             font-size: 16px;
-        
             
         }
 
@@ -164,7 +167,7 @@
 </div>
 
 <div class="filter">
-    
+    <div>
     <label for="category">Category:</label>
     <select id="category">
         <option value="all">All</option>
@@ -177,9 +180,9 @@
         <option value="bags">Bags</option>
         <option value="accessories">Accessories</option>
     </select>
-   
+    </div>
     
-   
+    <div>
     <label for="price">Price:</label>
         <select id="price">
             <option value="all">All</option>
@@ -187,7 +190,7 @@
             <option value="under100">$100 and under</option>
             <option value="over100">Over $100</option>
         </select>
-    
+    </div>
 </div>
 
 <div class="product-grid">
