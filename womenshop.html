@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Shop</title>
     <style>
         * {
@@ -72,11 +72,12 @@
             margin-bottom: 20px;
             text-align: center;
             border-radius: 5px;
-
+            font-size: 20px;
+            
         }
 
         .filter label {
-            margin-right: 10px;
+            margin-right: 1px;
            
         }
 
@@ -85,6 +86,10 @@
             border-radius: 3px;
             background-color: black;
             color: white;
+            align-content: space-between;
+            font-size: 16px;
+        
+            
         }
 
         .product {
@@ -146,7 +151,7 @@
     </div>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="store.html">Home</a></li>
             <li>WOMEN</li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -159,7 +164,8 @@
 </div>
 
 <div class="filter">
-    <label for="category">Filter by Category:</label>
+    
+    <label for="category">Category:</label>
     <select id="category">
         <option value="all">All</option>
         <option value="jeans">Jeans</option>
@@ -171,6 +177,9 @@
         <option value="bags">Bags</option>
         <option value="accessories">Accessories</option>
     </select>
+   
+    
+   
     <label for="price">Price:</label>
         <select id="price">
             <option value="all">All</option>
@@ -178,6 +187,7 @@
             <option value="under100">$100 and under</option>
             <option value="over100">Over $100</option>
         </select>
+    
 </div>
 
 <div class="product-grid">
