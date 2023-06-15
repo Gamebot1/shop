@@ -1,3 +1,6 @@
+
+        
+        
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +13,13 @@
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
             font-family: Arial, sans-serif;
-            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrGZuEJjO5H1YlwJwK5CDHKryZDoKTRTlXuw&usqp=CAU);
+            background-color:floralwhite;
         }
-        
-         header {
+
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -27,18 +31,13 @@
         .logo {
             font-size: 30px;
             flex: 1;
-        }    
-            
-        .hero {
-            text-align: center;
-            padding: 30px;
-        } 
-        
-        .hero img{
-            width: 90%;
-            height: 250px;
         }
-           
+
+        .logo p {
+            font-weight: bold;
+            color: #fff;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
@@ -64,38 +63,68 @@
             background: grey;
             transform: .5s;
         }
-        
+
+        .search-bar {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            width: 200px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-bar button {
+            padding: 8px 10px;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 500px;
+            height: 150px;
+        }
+
+        .filter {
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .filter label {
+            margin-right: 10px;
+        }
+
+        .filter select {
+            padding: 5px;
+            border-radius: 3px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-gap: 20px;
             margin: 50px 20px;
-        }
-        
-        .filter {
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 20px;
-            margin-left: 45%;
-            margin-right: 65%;
-            
-        }
-
-        .filter label {
-            border-radius: 5px;
-            margin-left: 45%;
-            margin-right: 65%;
-            
-            
-        }
-
-        .filter select {
-            padding: 5px;
-            background-color: black;
-            color: white;
-            align-content: space-between;
-            font-size: 16px;
-            
         }
 
         .product {
@@ -135,16 +164,13 @@
         }
 
         .footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-}
-
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
         
-            
-            
     </style>
 </head>
     
@@ -158,23 +184,24 @@
     </div>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            
+            <li><a href="store.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
-
+    
+<div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search products">
+        <button id="search-button">Search</button>
+    </div>
+    
 <div class="hero">
     <h1>Shop Our Collection</h1>
-    <img src="https://media.istockphoto.com/id/512176289/photo/3d-render-red-text-50-percent-off.jpg?s=612x612&w=0&k=20&c=q5TkZt2iwG7gGZTysj4Ul71nkZOm-6iWXMa1A9OAXAE=" alt="Product Image">
+    <img src="https://via.placeholder.com/300x300" alt="Product Image">
 </div>
 
-
 <div class="filter">
-    
-    <div>
     <label for="category">Category:</label>
     <select id="category">
         <option value="all">All</option>
@@ -182,17 +209,13 @@
         <option value="shirts">Shirts</option>
         <option value="belts">Belts</option>
     </select>
-    </div>
-    
-    <div>
     <label for="price">Price:</label>
-    <select id="price">
-        <option value="all">All</option>
-        <option value="under50">$50 and under</option>
-        <option value="under100">$100 and under</option>
-        <option value="over100">Over $100</option>
-     </select>
-     </div>
+        <select id="price">
+            <option value="all">All</option>
+            <option value="under50">$50 and under</option>
+            <option value="under100">$100 and under</option>
+            <option value="over100">Over $100</option>
+        </select>
 </div>
 
 <div class="product-grid">
@@ -291,6 +314,32 @@
 <div class="footer"><p>&copy; 2023 Clothing Store. All Rights Reserved.</p></div>
     
 <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('search-input');
+            const searchButton = document.getElementById('search-button');
+            const products = document.querySelectorAll('.product');
+
+            function searchProducts() {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                products.forEach(function (product) {
+                    const productName = product.querySelector('h3').textContent.toLowerCase();
+                    const productPrice = product.querySelector('p').textContent.toLowerCase();
+
+                    if (productName.includes(searchTerm) || productPrice.includes(searchTerm)) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            }
+
+            searchButton.addEventListener('click', searchProducts);
+            searchInput.addEventListener('input', searchProducts);
+        });
+
+    
     document.addEventListener('DOMContentLoaded', function () {
         const categorySelect = document.getElementById('category');
         const priceSelect = document.getElementById('price');
